@@ -1,4 +1,5 @@
 site_name: 'test-backstage'
+docs_dir: .
 nav:
   - Home: index.md
 plugins:
