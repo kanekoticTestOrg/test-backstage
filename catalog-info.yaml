@@ -17,6 +17,8 @@ spec:
   type: service
   lifecycle: experimental
   owner: group:pet-managers
+  definition:
+    $openapi: https://api.apis.guru/v2/openapi.yaml
   providesApis:
     - petstore
     - internal/streetlights
