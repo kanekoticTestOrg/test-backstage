@@ -13,12 +13,8 @@ metadata:
       title: Website
       icon: dashboard
 spec:
-  type: service
-  lifecycle: experimental
-  owner: group:pet-managers
+  type: openapi
+  lifecycle: production
+  owner: petstore@example.com
   definition:
-    $openapi: https://api.apis.guru/v2/openapi.yaml
-  providesApis:
-    - petstore
-    - internal/streetlights
-    - hello-world
+    $text: https://petstore.swagger.io/v2/swagger.json
