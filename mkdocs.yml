@@ -1,5 +1,5 @@
 site_name: 'test-backstage'
 nav:
-  - Home: index.md
+  - Home: docs/index.md
 plugins:
   - techdocs-core
