@@ -1,2 +1,5 @@
-site_name: MkLorum
-site_url: https://example.com/
+site_name: 'test-backstage'
+nav:
+  - Home: index.md
+plugins:
+  - techdocs-core
