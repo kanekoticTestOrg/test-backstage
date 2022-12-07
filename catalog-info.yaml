@@ -7,8 +7,7 @@ metadata:
     github.com/project-slug: kanekoticTestOrg/test-backstage
     backstage.io/techdocs-ref: dir:.
     backstage.io/adr-location: docs/adrs
-    kafka.apache.org/consumer-groups: 
-      - awesome-consumer-group
+    kafka.apache.org/consumer-groups: cluster-name/consumer-group-name
   links:
     - url: https://dashboard.example.com
       title: Website
