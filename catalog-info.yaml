@@ -2,9 +2,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: test-backstage
+  description: awesome documentation for backstage
   annotations:
     github.com/project-slug: kanekoticTestOrg/test-backstage
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/adr-location: docs/adrs
 spec:
-  type: other
+  type: compne
   lifecycle: unknown
   owner: guests
