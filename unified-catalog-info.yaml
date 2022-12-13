@@ -1,0 +1,81 @@
+---
+apiVersion: "backstage.io/v1alpha1"
+kind: "Domain"
+metadata:
+  name: domainA
+  description: a domain
+  tags:
+  - "domain"
+spec:
+  owner: groupA
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: groupA
+  description: a test group
+spec:
+  type: team
+  profile:
+    displayName: groupA
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: systemA
+  description: Some system
+  tags:
+    - system
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: groupA
+  domain: domainA
+---
+apiVersion: "backstage.io/v1alpha1"
+kind: "Component"
+metadata:
+  name: componentA
+  description: a component
+  tags:
+  - springboot
+spec:
+  owner: groupA
+  lifecycle: "production"
+  partOf: "domain:domainA"
+  providesApis:
+  - "something"
+  # - componentA-api # uncomment and it works
+  system: systemA
+  dependsOn: []
+  consumesApis: []
+  type: "service"
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: componentA-api
+  description: the API
+spec:
+  system: systemA
+  type: openapi
+  lifecycle: production
+  owner: groupA
+  apiProvidedBy: component:componentA # this does not work
+  definition: |
+    some thing here
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  system: systemA
+  name: my-db
+  description: some db
+  tags:
+    - mysql
+spec:
+  type: database
+  lifecycle: production
+  owner: groupA
+  dependencyOf: component:systemA
