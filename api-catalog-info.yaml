@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: test-backstage
   description: awesome documentation for backstage
@@ -13,6 +13,8 @@ metadata:
       title: Website
       icon: dashboard
 spec:
-  type: service
+  type: openapi
   lifecycle: experimental
   owner: group:kanekotic
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
