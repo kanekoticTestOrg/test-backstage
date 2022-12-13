@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: test-backstage
-  description: awesome documentation for backstage
+  name: api-test-backstage
+  description: awesome documentation for api in backstage
   annotations:
     github.com/project-slug: kanekoticTestOrg/test-backstage
     backstage.io/techdocs-ref: dir:.
