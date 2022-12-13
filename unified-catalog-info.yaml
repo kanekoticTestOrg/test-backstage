@@ -1,11 +1,11 @@
 ---
-apiVersion: "backstage.io/v1alpha1"
-kind: "Domain"
+apiVersion: backstage.io/v1alpha1
+kind: Domain
 metadata:
   name: domainA
   description: a domain
   tags:
-  - "domain"
+  - domain
 spec:
   owner: groupA
 ---
@@ -33,8 +33,8 @@ spec:
   owner: groupA
   domain: domainA
 ---
-apiVersion: "backstage.io/v1alpha1"
-kind: "Component"
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
   name: componentA
   description: a component
@@ -42,15 +42,15 @@ metadata:
   - springboot
 spec:
   owner: groupA
-  lifecycle: "production"
-  partOf: "domain:domainA"
+  lifecycle: production
+  partOf: domain:domainA
   providesApis:
-  - "something"
+  - something
   # - componentA-api # uncomment and it works
   system: systemA
   dependsOn: []
   consumesApis: []
-  type: "service"
+  type: service
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
