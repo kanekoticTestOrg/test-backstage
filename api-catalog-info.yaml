@@ -7,7 +7,7 @@ metadata:
   description: awesome documentation for api in backstage
   tags:
     - kotlin
-    - openAPI
+    - openapi
   links:
     - url: https://dashboard.example.com
       title: Website
