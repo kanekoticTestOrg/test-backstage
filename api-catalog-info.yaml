@@ -2,16 +2,21 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: api-test-backstage
+  namespace: holaluz
+  title: API Test Backstage
   description: awesome documentation for api in backstage
+  tags:
+    - kotlin
+    - openAPI
+  links:
+    - url: https://dashboard.example.com
+      title: Website
+      icon: dashboard
   annotations:
     github.com/project-slug: kanekoticTestOrg/test-backstage
     backstage.io/techdocs-ref: dir:.
     backstage.io/adr-location: docs/adrs
     kafka.apache.org/consumer-groups: cluster-name/consumer-group-name
-  links:
-    - url: https://dashboard.example.com
-      title: Website
-      icon: dashboard
 spec:
   type: openapi
   lifecycle: experimental
