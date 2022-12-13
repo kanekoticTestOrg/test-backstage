@@ -23,3 +23,5 @@ spec:
   owner: group:kanekotic
   definition:
     $text: https://petstore.swagger.io/v2/swagger.json
+  apiProvidedBy:
+    - component-test-backstage
